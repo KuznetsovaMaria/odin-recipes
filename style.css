@@ -1,0 +1,28 @@
+* {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    color: blueviolet;
+}
+
+img.main {
+    width: 500px;
+    height: auto;
+}
+
+ul {
+    background-color: rgb(233, 209, 255);
+}
+
+ol {
+    background-color: rgb(241, 196, 179);
+}
+
+ul, ol {
+    color: rgb(88, 88, 88);
+}
+
+

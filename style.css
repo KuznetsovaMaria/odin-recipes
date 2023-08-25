@@ -12,6 +12,8 @@ h1 {
 img.main {
     width: 500px;
     height: auto;
+    display: block;
+    margin: auto;
 }
 
 ul {

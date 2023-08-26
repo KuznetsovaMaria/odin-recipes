@@ -3,8 +3,12 @@
     padding: 8px;
 }
 
+body {
+    font-size: 16px;
+}
+
 h1 {
-    font-size: 50px;
+    font-size: 4em;
     text-align: center;
     color: blueviolet;
 }
@@ -31,7 +35,7 @@ ul, ol {
     padding-left: 0;
 }
 
-.list-of-inlines {
+.list-of-flex {
     display: flex;
     justify-content: center;
     flex: auto;
@@ -42,8 +46,6 @@ ul, ol {
 div {
     padding: 12px;
     border: 3px solid purple;
-    /* for the /actual/ width to be 200px and 
-    not 200 + all padding + all borders: */
 }
 
 span {
@@ -54,5 +56,27 @@ span {
 
 .div-flex-container {
     display: flex;
-    justify-content:space-around;
+    justify-content:center;
+    /* flex: auto; */
+    /* Add a gap between the flex items
+    that is respected when the screen and
+    the elements with it are shrunk: */
+    gap: 1em;
+    flex-direction: row;
+}
+
+/* for screens with width of 400px or less the 
+flex direction will change from row to column: */
+@media (max-width: 600px) {
+    .div-flex-container {
+        flex-direction: column;
+    }
+}
+
+.div-flex-container > * {
+    background-color: rgb(214, 228, 212);
+    flex-grow: 0;
+    flex-shrink: 1;
+    /* width of items becomes the length of their content: */
+    flex-basis: auto;
 }
